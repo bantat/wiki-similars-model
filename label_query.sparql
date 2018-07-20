@@ -1,0 +1,1 @@
+SELECT DISTINCT ?artist WHERE { ?artist rdfs:label ?name . MINUS { ?artist wdt:P31 wd:Q4167836 } . VALUES ?name { "%s"%s } . {SELECT ?artist WHERE { ?artist wdt:P31/wdt:P279* wd:Q2088357. } } UNION { SELECT ?artist WHERE { ?artist wdt:P106/wdt:P279* wd:Q639669. } } }

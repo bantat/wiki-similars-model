@@ -1,0 +1,1 @@
+SELECT DISTINCT ?item (SAMPLE(?article) AS ?articleSample) WHERE { ?article schema:about ?item ; schema:inLanguage  "en" ; schema:isPartOf    <https://en.wikipedia.org/> FILTER ( ?item = <http://www.wikidata.org/entity/%s> ) SERVICE wikibase:label { bd:serviceParam wikibase:language  "en" } } GROUP BY ?item
